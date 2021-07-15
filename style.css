@@ -1,0 +1,132 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root{
+    --dark-blue:hsl(233, 47%, 7%);
+    --blue: hsl(244, 38%, 16%);
+    --soft-blue:  hsl(277, 64%, 61%);
+}
+
+body{
+    background-color: var(--dark-blue);
+    font-size: 15px;
+    
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-wrapper{
+    width: 1440px;
+    background-color: var(--blue);
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.card-left{
+    width: 100%;
+}
+
+.card-left{
+    padding-left: 40px;
+}
+.card-left h1{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    width: 60%;
+}
+.card-left span{
+    color: var(--soft-blue);
+
+}
+.card-left p{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 40px;
+}
+
+.stat-headings{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+.stat-headings h2{
+    color: hsla(0, 0%, 100%);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 0;
+}
+
+.stat-headings p{
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 0;
+    font-size: 11px;
+}
+
+.card-right{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.card-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 10px 10px 0;
+}
+.card-right::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--soft-blue);
+    opacity: 0.7;
+    border-radius: 0 10px 10px 0;
+}
+
+
+@media (max-width: 768px) { 
+    .card-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .card-right img{
+        max-width: 100%;
+        display: block;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
+    .card-right img, .card-right::before{
+        border-radius: 10px 10px 0 0;
+    }
+    .card-left, .stat-headings{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .card-left h1, p, .stat-headings{
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        margin-bottom: 120px;
+    }
+    
+}
+.attribution { font-size: 11px; text-align: center;color: hsl(0, 0%, 100%); }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
